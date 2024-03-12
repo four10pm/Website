@@ -1,0 +1,27 @@
+
+.navbar { 
+    background-color: #660033;  
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+    position: absolute; 
+    top: 5px;
+    left: 0;
+}
+
+.navItem {
+    border: outset #660033 3px; 
+    color: white;
+    text-decoration: none;
+    font-family: fantasy;
+    width: 33%; 
+    text-align: center; 
+    padding: 5px;
+}
+
+.navItem:hover {
+    font-family: serif; 
+    color: #660033;
+    background-color: #cc6699;
+}
