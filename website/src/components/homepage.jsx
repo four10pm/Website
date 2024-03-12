@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/homepage.css"
+import "../styles/mobile.css"
 
 export default function Homepage() {
 
@@ -7,7 +8,7 @@ export default function Homepage() {
         <div className="bio">
             <div className="bioStart">
                 <div className="bioPhotoArea">
-                    <img className="bioPhoto" alt="Paulina" />
+                    <img className="bioPhoto" alt="Paulina" src="public/images/Headshot.jpeg"/>
                 </div>
                 <div className="bioInfo" >
                     <h2> Paulina Fielek </h2>
@@ -29,12 +30,15 @@ export default function Homepage() {
                 <div className="petColumns">
                     <div class="petPhoto">
                         <h4 class="petName"> Ellie </h4>
-                        <img alt="Ellie" />
+                        <img alt="Ellie" src="public/images/Ellie.jpeg"/>
                     </div>
                     <div class="petPhoto">
                         <h4 class="petName"> Acadia </h4>
-                        <img alt="Acadia" />
+                        <img alt="Acadia" src="public/images/Acadia.jpeg" />
                     </div>
+                </div>
+                <div className="styling bottom">
+
                 </div>
             </div>
         </div>

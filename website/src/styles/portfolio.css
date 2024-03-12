@@ -1,0 +1,68 @@
+.project {
+    display: flex;
+    background-color: rgb(102, 0, 51, .5);
+    text-align: left;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.projectCarousel {
+    width: 60%;
+    position: relative;  
+    height: fit-content;
+}
+
+.projectImage {
+    width: 95%;
+    margin: 10px;
+    border: solid 1px #660033;
+}
+
+.projectCaption {
+    position: absolute;
+    bottom: 0;
+    margin-left: 11px;
+    background-color: #660033;
+    color: white; 
+    width: 95%;
+    z-index: 1;
+    text-align: center; 
+}
+
+.previous, .next {
+    position: absolute; 
+    top: 50%;
+    width: auto;
+    transition: 0.6s ease;
+    z-index: 1;
+    background-color: #660033;
+    color: white; 
+}
+
+.next {
+    right: 0;
+  }
+
+.projectInfo {
+    width: 40%;
+    margin-left: 10px;
+}
+
+.projectLists {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listName {
+    font-weight: bold;
+}
+
+.projectSkills {
+    margin-left: 5px;
+}
+
+.portfolio {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 115px;
+}

@@ -1,10 +1,12 @@
-
+.experience {
+    margin-top: 10px;
+}
 
 .sectionHeader {
     background-color: #660033; 
     color: white; 
     padding: 2px;
-    margin: 5px 0px;
+    margin: 0px;
 }
 
 .section {
@@ -87,6 +89,6 @@
 
 .hobbies {
     display: grid;
-    grid-template: 1fr .5fr/ 1fr 1fr 1fr 1fr; 
+    grid-template: 1fr / 1fr 1fr 1fr 1fr; 
     grid-column-gap: 5px;
 }

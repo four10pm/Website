@@ -1,6 +1,7 @@
 import React from "react";
 import { software, product, education, volunteer, skills, hobbies } from "./data"
 import "../styles/experience.css"
+import "../styles/mobile.css"
 
 export default function Experience() {
 
@@ -104,6 +105,9 @@ export default function Experience() {
                         </div>
                     )
                 })}
+                </div>
+                <div className="styling bottom">
+
                 </div>
             </div>
         </div>

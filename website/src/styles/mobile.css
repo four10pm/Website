@@ -1,0 +1,116 @@
+@media only screen and (max-width:800px) {
+    div.main {
+        margin-top: 130px;
+    }
+
+    h4 {
+        margin-block-start: 1em; 
+        margin-block-end: 1em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+        top: 0px;
+    }
+
+    .navItem {
+        width: 95%;
+        margin: 0px 2px;
+    }
+
+    form {
+        flex-direction: column; 
+    }
+
+    label {
+        width: 65%;
+        margin: 0 auto;
+        text-align: end;
+    }
+
+    form > button {
+        margin-top: 5px;
+        align-self: center;
+        width: 70%;
+    }
+
+    .bioStart {
+        flex-direction: column;
+    }
+
+    .petColumns {
+        flex-direction: column;
+    }
+
+    div.bottom {
+        height: 200px;
+    }
+
+    div.educationlist {
+        flex-direction: column;
+    }
+
+    div.section.education {
+        width: 100%;
+    }
+
+    div.volunteerskillsarea {
+        display: block;
+    }
+
+    div.section.volunteer {
+        width: 100%;
+        height: fit-content; 
+        margin-bottom: 5px;
+    }
+
+    div.section.skills {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    h3.sectionHeader.skills {
+        margin-left: 0px;
+    }
+
+    span.subsection {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 5px;
+        height: fit-content;
+    }
+
+    div.hobbies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.portfolio {
+        margin: 0px;
+        padding-bottom: 0px;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    div.projectCarousel {
+        width: 100%;
+    }
+
+    div.projectInfo {
+        width: 100%;
+    }
+
+    p.listName {
+        margin-left: -20px;
+    }
+
+    div.projectLists > ul {
+        padding-inline-start: 20px;
+    }
+}

@@ -7,7 +7,12 @@ body {
     height: 100vh; 
     justify-content: center; 
     width: 100vw;
-    margin-top: 5%;
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.bottom {
+    height: 125px;
 }
 
 .bio {
@@ -16,21 +21,19 @@ body {
 
 .bioStart {
     display: flex; 
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px; 
 }
 
-.bioInfo {
-    width: 50%; 
-    margin: 0 auto;
-}
-
-.bioPhotoArea {
-    margin: 0 auto;
-}
-
-.bioPhoto {
+img {
     border: 2px white solid;
+    width: 250px;
+    margin: 10px;
+}
+
+.bioInfo {
+    text-align: left;
+    margin: 10px;
 }
 
 .LI {
