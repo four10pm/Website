@@ -15,6 +15,7 @@ export default function Homepage() {
                     <p> Portland, OR </p>
                     <p> Software Developer </p>
                     <p> <a class="LI" href="https://www.linkedin.com/in/paulina-sarah-fielek"> LinkedIn &#x27A1; </a> </p>
+                    <p> <a class="LI" href="mailto:paulinasfielek@gmail.com" name="paulinasfielek@gmail.com"> Email &#x27A1; </a> </p>
                 </div>
             </div>
             <div className="bioIntro">

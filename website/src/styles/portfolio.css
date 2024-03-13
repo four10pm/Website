@@ -10,10 +10,12 @@
     width: 60%;
     position: relative;  
     height: fit-content;
+    text-align: center;
 }
 
 .projectImage {
-    width: 95%;
+    max-width: 95%;
+    width: fit-content;
     margin: 10px;
     border: solid 1px #660033;
 }
@@ -21,7 +23,7 @@
 .projectCaption {
     position: absolute;
     bottom: 0;
-    margin-left: 11px;
+    margin-left: 21px;
     background-color: #660033;
     color: white; 
     width: 95%;
@@ -37,6 +39,9 @@
     z-index: 1;
     background-color: #660033;
     color: white; 
+}
+.previous {
+    left: 0;
 }
 
 .next {

@@ -5,11 +5,13 @@ import "../styles/mobile.css"
 
 export default function Portfolio() {
     const [carouselNum, setCarouselNum] = useState(0)
+    const [carousel, setCarousel] = useState("")
 
     return (
         <div className="portfolio">
             {projects.map((project) => {
                 const slideshowNext = () => {
+                    setCarousel(project.title)
                     if (carouselNum === project.images.length-1) {
                         setCarouselNum(0)
                     } else {setCarouselNum(carouselNum+1)}
@@ -23,7 +25,7 @@ export default function Portfolio() {
                     <div className="project" id={project.title}>
                         <div className="projectCarousel" >
                             {project.images.map((image) => {
-                                if (image.id === carouselNum) {
+                                if (image.id === carouselNum && carousel === project.title) {
                                     return (
                                         <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
                                             <button className="previous" onClick={()=>{slideshowPrevious()}}> &#10094; </button>
@@ -31,9 +33,17 @@ export default function Portfolio() {
                                             <button className="next" onClick={()=>{slideshowNext()}}> &#10095; </button>
                                             <p className="projectCaption"> {image.caption} </p>
                                         </div>
-                                    )
+                                    )} else if (image.id === 0 && carousel !== project.title) {
+                                        return (
+                                            <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
+                                            <button className="previous" onClick={()=>{slideshowPrevious()}}> &#10094; </button>
+                                            <img className="projectImage" src={image.src} alt={`${project.title} image`} />
+                                            <button className="next" onClick={()=>{slideshowNext()}}> &#10095; </button>
+                                            <p className="projectCaption"> {image.caption} </p>
+                                        </div>
+                                        )
+                                    }
                                 }
-                            }
                             )}
                         </div>
                         <div className="projectInfo">
