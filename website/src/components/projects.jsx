@@ -2,6 +2,7 @@ import React from "react";
 
 export const projects = [
     {
+        "id": "pantryParty",
         "title": "Pantry Party",
         "link": "https://pantry-party-app.onrender.com/",
         "github": "",
@@ -69,6 +70,7 @@ export const projects = [
         "GH": true
     },
     {
+        "id": "dateNight",
         "title": "Date Night",
         "link": "https://pantry-party-app.onrender.com/",
         "github": "",
@@ -114,31 +116,33 @@ export const projects = [
         "skills": ["project management", "schema design", "mockups"],
         "GH": true
     },
-    {
-        "title": "Personal Website",
-        "link": "/",
-        "github": "",
-        "description": "A single-page web app to show my skills and previous experience",
-        "images": [
+    // {
+    //     "id": "personalWebsite",
+    //     "title": "Personal Website",
+    //     "link": "/",
+    //     "github": "",
+    //     "description": "A single-page web app to show my skills and previous experience",
+    //     "images": [
             
-        ],
-        "stack": ["react", "javascript", "CSS"],
-        "skills": [],
-        "GH": false
-    },
-    {
-        "title": "Taboo",
-        "link": "",
-        "github": "",
-        "description": "Remaking the classic word game Taboo for an online audience",
-        "images": [
-            "",
-            ""
-        ],
-        "stack": ["node.js", "SQL", "react", "context", "CSS"],
-        "skills": ["project management", "schema design", "mockups"],
-        "GH": false
-    },
+    //     ],
+    //     "stack": ["react", "javascript", "CSS"],
+    //     "skills": [],
+    //     "GH": false
+    // },
+    // {
+    //     "id": "taboo",    
+    //     "title": "Taboo",
+    //     "link": "",
+    //     "github": "",
+    //     "description": "Remaking the classic word game Taboo for an online audience",
+    //     "images": [
+    //         "",
+    //         ""
+    //     ],
+    //     "stack": ["node.js", "SQL", "react", "context", "CSS"],
+    //     "skills": ["project management", "schema design", "mockups"],
+    //     "GH": false
+    // },
 
 
 ]

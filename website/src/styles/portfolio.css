@@ -3,7 +3,7 @@
     background-color: rgb(102, 0, 51, .5);
     text-align: left;
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .projectCarousel {
@@ -11,6 +11,12 @@
     position: relative;  
     height: fit-content;
     text-align: center;
+}
+
+.projectImageArea {
+    display: flex; 
+    justify-content: center; 
+    padding-bottom: 10px;
 }
 
 .projectImage {
@@ -23,10 +29,12 @@
 .projectCaption {
     position: absolute;
     bottom: 0;
-    margin-left: 21px;
+    margin: auto;
+    border: solid 1px #660033;
     background-color: #660033;
     color: white; 
     width: 95%;
+    align-self: center; 
     z-index: 1;
     text-align: center; 
 }

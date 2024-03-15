@@ -6,44 +6,74 @@ import "../styles/mobile.css"
 export default function Portfolio() {
     const [carouselNum, setCarouselNum] = useState(0)
     const [carousel, setCarousel] = useState("")
+    const [pantryPartyNum, setPantryPartyNum] = useState(0)
+    const [dateNightNum, setDateNightNum] = useState(0)
 
     return (
         <div className="portfolio">
             {projects.map((project) => {
                 const slideshowNext = () => {
                     setCarousel(project.title)
-                    if (carouselNum === project.images.length-1) {
+                    if (carouselNum === project.images.length - 1) {
                         setCarouselNum(0)
-                    } else {setCarouselNum(carouselNum+1)}
+                    } else if (carouselNum > project.images.length - 1) {
+                        setCarouselNum(1) 
+                    } else { 
+                        setCarouselNum(carouselNum + 1) 
+                    }
+                    if (carousel === "Pantry Party") {
+                        setPantryPartyNum(carouselNum)
+                    }
+                    if (carousel === "Date Night") {
+                        setDateNightNum(carouselNum)
+                    }
                 }
                 const slideshowPrevious = () => {
+                    setCarousel(project.title)
                     if (carouselNum === 0) {
-                        setCarouselNum(project.images.length-1)
-                    } else {setCarouselNum(carouselNum-1)}
+                        setCarouselNum(project.images.length - 1)
+                    } else { setCarouselNum(carouselNum - 1) }
+                    if (carousel === "Pantry Party") {
+                        setPantryPartyNum(carouselNum)
+                    }
+                    if (carousel === "Date Night") {
+                        setDateNightNum(carouselNum)
+                    }
                 }
                 return (
                     <div className="project" id={project.title}>
                         <div className="projectCarousel" >
                             {project.images.map((image) => {
-                                if (image.id === carouselNum && carousel === project.title) {
+                                if (carousel === project.title && image.id === carouselNum) {
                                     return (
                                         <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
-                                            <button className="previous" onClick={()=>{slideshowPrevious()}}> &#10094; </button>
-                                            <img className="projectImage" src={image.src} alt={`${project.title} image`} />
-                                            <button className="next" onClick={()=>{slideshowNext()}}> &#10095; </button>
-                                            <p className="projectCaption"> {image.caption} </p>
+                                            <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
+                                            <div className="projectImageArea">
+                                                <p className="projectCaption"> {image.caption} </p>
+                                                <img className="projectImage" src={image.src} alt={`${project.title} image`} />
+                                            </div>
+                                            <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                         </div>
-                                    )} else if (image.id === 0 && carousel !== project.title) {
-                                        return (
-                                            <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
-                                            <button className="previous" onClick={()=>{slideshowPrevious()}}> &#10094; </button>
-                                            <img className="projectImage" src={image.src} alt={`${project.title} image`} />
-                                            <button className="next" onClick={()=>{slideshowNext()}}> &#10095; </button>
-                                            <p className="projectCaption"> {image.caption} </p>
+                                    )
+                                } else if (carousel !== project.title) {
+                                    if (
+                                        (project.id === "dateNight" && image.id === dateNightNum)
+                                        || 
+                                        (project.id === "pantryParty" && image.id === pantryPartyNum))
+                                    {
+                                     return (
+                                        <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
+                                            <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
+                                            <div className="projectImageArea">
+                                                <p className="projectCaption"> {image.caption} </p>
+                                                <img className="projectImage" src={image.src} alt={`${project.title} image`} />
+                                            </div>
+                                            <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                         </div>
-                                        )
+                                    )
                                     }
                                 }
+                            }
                             )}
                         </div>
                         <div className="projectInfo">
