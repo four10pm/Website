@@ -11,12 +11,14 @@ body {
     margin-bottom: 5px;
 }
 
-.bottom {
-    height: 125px;
+.bio {
+    width: 50%; 
+    margin: 0 auto; 
 }
 
-.bio {
-    background-color:rgb(102, 0, 51, .5);
+.bioPhoto {
+    border-radius: 100%;
+    height: 250px;
 }
 
 .bioStart {
@@ -27,7 +29,6 @@ body {
 
 img {
     border: 2px white solid;
-    width: 250px;
     margin: 10px;
 }
 
@@ -37,7 +38,7 @@ img {
 }
 
 .LI {
-    color: white; 
+    color: #33001a; 
     text-decoration: none; 
 }
 
@@ -45,11 +46,14 @@ img {
     margin: 5px;
 }
 
-.petColumns {
-    display: flex; 
-    justify-content: space-around; 
+.bioPets { 
+    width: fit-content; 
+   margin: 0 auto; 
 }
 
-.petPhoto > img {
-    border: 2px white solid;
+.petColumns {
+    display: flex; 
+    justify-content: center; 
+    border: 2px #33001a solid;
+   
 }
