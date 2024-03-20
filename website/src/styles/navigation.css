@@ -1,28 +1,17 @@
-
-.navbar { 
-    background-color: #660033;  
-    padding: 5px;
-    width: 100%;
+.navBar {
     display: flex;
-    justify-content: space-around; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 2; 
+    flex-direction: column;
+}
+
+.navButton {
+    width: 100%;
 }
 
 .navItem {
-    border: outset #660033 3px; 
-    color: white;
-    text-decoration: none;
-    font-family: fantasy;
-    width: 33%; 
-    text-align: center; 
-    padding: 5px;
+ color: black;    
+ line-height: 1.5;
 }
 
 .navItem:hover {
-    font-family: serif; 
-    color: #660033;
-    background-color: #cc6699;
+    font-variant: small-caps;
 }

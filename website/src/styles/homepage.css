@@ -1,59 +1,110 @@
-body {
-    position: relative;  
+.app {
+    display: flex; 
+}
+
+.navigation {
+    width: 20%; 
 }
 
 .main {
-    color: #33001a;
-    height: 100vh; 
-    justify-content: center; 
-    width: 100vw;
-    margin-top: 60px;
-    margin-bottom: 5px;
+    margin: 10px auto;
+    width: 80%;
+    background-color: white;
 }
 
-.bio {
-    width: 50%; 
-    margin: 0 auto; 
+h1 {
+    font-variant: small-caps;
+    color: #660033;
+    margin-left: 10px;
+    font-size: 2.5em;
+}
+
+.bioPhotoArea {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    padding-top: 10px;
 }
 
 .bioPhoto {
-    border-radius: 100%;
     height: 250px;
+    border-radius: 100%;
 }
 
-.bioStart {
-    display: flex; 
-    justify-content: center;
-    margin-top: 10px; 
-}
-
-img {
-    border: 2px white solid;
-    margin: 10px;
-}
-
-.bioInfo {
-    text-align: left;
-    margin: 10px;
-}
-
-.LI {
-    color: #33001a; 
-    text-decoration: none; 
+.bioPhoto:hover {
+    border: solid 5px #660033;
+    cursor: pointer; 
 }
 
 .bioIntro {
-    margin: 5px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px 5px 10px 5px;
+    background-color: rgb(102, 0, 51, .5);
+    border-radius: 8px;
 }
 
-.bioPets { 
-    width: fit-content; 
-   margin: 0 auto; 
+.bioInfo {
+    height: 250px;
+    line-height: 1;
 }
 
-.petColumns {
-    display: flex; 
-    justify-content: center; 
-    border: 2px #33001a solid;
-   
+.bioPets {
+    display: none; 
+}
+
+.LI {
+    color: #660033;
+}
+
+a:hover {
+    font-variant: small-caps;
+    color: #660033;
+    cursor: pointer;
+    font-size: large;
+}
+
+.easterEgg {
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.easterEgg > p {
+    font-family: cursive; 
+}
+
+.pawPrintLeft > svg {
+    transform: rotate(315deg);
+}
+
+.pawPrintRight > svg {
+    transform: rotate(45deg);
+}
+
+.petPhoto {
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #660033;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    color: #660033;
+    display:  flex; 
+    align-items: center; 
+}
+
+.scrollIcon {
+    font-size: xx-large; 
+}
+
+.scrollText {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #660033;
 }
