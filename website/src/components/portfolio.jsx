@@ -106,8 +106,6 @@ export default function Portfolio() {
                     </div>
                 )
             })}
-            <div className="styling bottom">
-            </div>
         </div>
     )
 }

@@ -61,7 +61,9 @@ export default function Homepage() {
             </div>
             <Experience />
             <Portfolio />
+            <div className="secretArea"> 
             <p> Did you meet my dogs? </p>
+            </div>
         </div>
     )
 }

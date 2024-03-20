@@ -90,6 +90,15 @@ a:hover {
     border: 2px solid #660033;
 }
 
+.secretArea {
+    height: 50px;
+    color: white; 
+}
+
+.secretArea:hover {
+    color: #660033;
+}
+
 .scroll {
     position: fixed;
     bottom: 0;

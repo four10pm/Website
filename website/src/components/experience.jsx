@@ -8,7 +8,7 @@ export default function Experience() {
     const [display, setDisplay] = useState("")
 
     return (
-        <div className="experience grid">
+        <div className="experience">
             {software.map((sw) => {
                 return (
                     <div className="softwareExperience">

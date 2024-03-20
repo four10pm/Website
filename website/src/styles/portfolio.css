@@ -4,8 +4,6 @@
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(102, 0, 51, .5);
     text-align: left;
     margin: 10px auto;
@@ -83,10 +81,4 @@
 
 .projectSkills {
     margin-left: 5px;
-}
-
-.portfolio {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 115px;
 }

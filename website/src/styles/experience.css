@@ -1,18 +1,25 @@
 .experience {
-    text-align: left; 
-    width: 90%;
+    text-align: left;
+    width: 80%;
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    background-color: #f4edf0;
+    opacity: 0.8;
+    background-image: linear-gradient(#660033 1px, transparent 1px), linear-gradient(to right, #660033 1px, #f4edf0 1px) ;
+    background-size: 20px 20px;
 }
 
 h4 {
-    font-variant: small-caps; 
+    font-variant: small-caps;
     color: #660033;
 }
 
 .experienceDisplay {
     width: 50%;
-    margin: 10px auto;
+    margin: 0px auto;
+    padding: 5px;
+    background-color: white;
 }
 
 .experienceDisplay:hover {
@@ -24,25 +31,29 @@ h4 {
 
 .section {
     width: 90%;
-    margin: 0 auto;
-    padding-bottom: 5px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
 }
 
-.section > ul {
-    text-align: left; 
+.section>ul {
+    text-align: left;
 }
 
 .subsection {
     width: 60%;
-    margin: 0 auto;
-    padding-bottom: 5px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
 }
 
-.subsection > ul {
+.subsection>ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    text-align: left; 
-    margin: 0 auto;
+    text-align: left;
+    margin: 5px auto;
     padding-inline-start: 0;
 }
