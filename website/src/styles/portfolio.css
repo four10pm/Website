@@ -1,53 +1,60 @@
+.portfolio {
+    display: flex; 
+    flex-direction: column; 
+}
+
 .project {
-    display: flex;
     background-color: rgb(102, 0, 51, .5);
     text-align: left;
-    margin-top: 10px;
+    margin: 10px auto;
     padding: 10px;
+    width: 80%;
+    border-radius: 8px;
 }
 
 .projectCarousel {
-    width: 60%;
     position: relative;  
-    height: fit-content;
     text-align: center;
+    
 }
 
 .projectImageArea {
     display: flex; 
-    justify-content: center; 
-    padding-bottom: 10px;
+    flex-direction: column; 
+    align-items: stretch; 
+    padding-bottom: 10px; 
 }
 
 .projectImage {
+    display: none;
     max-width: 95%;
     width: fit-content;
-    margin: 10px;
+    margin: 5px auto 0px auto;
     border: solid 1px #660033;
+    max-height: 500px;
+    align-self: baseline;
 }
 
 .projectCaption {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
     border: solid 1px #660033;
     background-color: #660033;
     color: white; 
-    width: 95%;
-    align-self: center; 
+    width: 95%; 
     z-index: 1;
     text-align: center; 
+    margin: 0px auto;
 }
 
 .previous, .next {
     position: absolute; 
-    top: 50%;
+    top: 40%;
     width: auto;
     transition: 0.6s ease;
     z-index: 1;
-    background-color: #660033;
+    background-color: rgb(102, 0, 51, .9);
     color: white; 
 }
+
 .previous {
     left: 0;
 }
@@ -57,13 +64,13 @@
   }
 
 .projectInfo {
-    width: 40%;
     margin-left: 10px;
 }
 
 .projectLists {
-    display: flex;
+    display: none;
     justify-content: space-around;
+    width: 60%;
 }
 
 .listName {
@@ -72,10 +79,4 @@
 
 .projectSkills {
     margin-left: 5px;
-}
-
-.portfolio {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 115px;
 }

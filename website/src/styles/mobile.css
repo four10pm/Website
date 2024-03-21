@@ -1,112 +1,46 @@
+
 @media only screen and (max-width:800px) {
     div.main {
-        margin-top: 130px;
+        width: 100%;
     }
 
-    h4 {
-        margin-block-start: 1em; 
-        margin-block-end: 1em;
-    }
-
-    .navbar {
-        flex-direction: column;
-        padding: 0;
-        margin-top: 0;
-        top: 0px;
-    }
-
-    .navItem {
-        width: 95%;
-        margin: 0px 2px;
-    }
-
-    form {
+    div.bioPhotoArea {
         flex-direction: column; 
     }
 
-    label {
-        width: 65%;
-        margin: 0 auto;
-        text-align: end;
+    img.bioPhoto, img.petPhoto {
+        height: 200px;
     }
 
-    form > button {
-        margin-top: 5px;
-        align-self: center;
-        width: 70%;
-    }
-
-    .bioStart {
-        flex-direction: column;
-    }
-
-    .petColumns {
-        flex-direction: column;
-    }
-    
-    div.educationlist {
-        flex-direction: column;
-    }
-
-    div.section.education {
-        width: 100%;
-    }
-
-    div.volunteerskillsarea {
-        display: block;
-    }
-
-    div.section.volunteer {
-        width: 100%;
+    div.bioInfo {
         height: fit-content; 
-        margin-bottom: 5px;
     }
 
-    div.section.skills {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
+    a.scroll { 
+        flex-direction: column; 
+        background-color: rgb(244, 237, 240, .5);
     }
 
-    h3.sectionHeader.skills {
-        margin-left: 0px;
+    div.bioIntro, div.experience {
+        width: 90%; 
+        margin: 5px auto; 
     }
 
-    span.subsection {
-        width: 100%;
-        margin-left: 0px;
-        margin-bottom: 5px;
-        height: fit-content;
+    div.project {
+        margin: 5px auto;
+        width: 90%; 
     }
 
-    div.hobbies {
-        display: flex;
-        flex-direction: column;
+    p.projectCaption {
+        font-size: smaller; 
     }
 
-    div.portfolio {
-        margin: 0px;
-        padding-bottom: 0px;
+    div.subsection > ul {
+        flex-direction: column; 
     }
 
-    .project {
-        flex-direction: column;
+    div.secretArea {
+        color: rgb(102, 0, 51, .5); 
     }
 
-    div.projectCarousel {
-        width: 100%;
-    }
-
-    div.projectInfo {
-        width: 100%;
-    }
-
-    p.listName {
-        margin-left: -20px;
-    }
-
-    div.projectLists > ul {
-        padding-inline-start: 20px;
-    }
 }

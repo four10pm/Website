@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-// import "../styles/navigation.css"
+import "../styles/navigation.css"
 import "../styles/mobile.css"
+import { downIcon, upIcon } from "../assets/icons"
 
 export default function Navigation() {
     const [navbarOpen, setNavbarOpen] = useState(false)
@@ -9,10 +10,10 @@ export default function Navigation() {
     const navbar = () => {
         return (
             <nav>
-                <div className="navbar">
-                    <button onClick={() => { setNavbarOpen(false) }}>
-                        <i class="fa-solid fa-circle-chevron-up"></i>
-                        Menu
+                <div className="navBar">
+                    <button className="navButton" onClick={() => { setNavbarOpen(false) }} >
+                        {upIcon}
+                        &nbsp; Menu
                     </button>
                     <Link to={"/"} className="navItem" onClick={() => { setNavbarOpen(false) }}> About </Link>
                     <Link to={"/experience"} className="navItem" onClick={() => { setNavbarOpen(false) }}> Experience </Link>
@@ -26,9 +27,9 @@ export default function Navigation() {
         <>
             {navbarOpen && navbar()}
             {!navbarOpen && (
-                <button onClick={() => { setNavbarOpen(true) }}>
-                    <i class="fa-solid fa-circle-chevron-down"></i>
-                    Menu
+                <button className="navButton" onClick={() => { setNavbarOpen(true) }}>
+                    {downIcon}
+                    &nbsp; Menu
                 </button>)
             }
         </>
