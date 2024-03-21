@@ -5,8 +5,10 @@ export const software = [
         "time": "November 2023 - March 2024",
         "description": "4 month full-time immersive full-stack software development bootcamp, learning web development tools including React, Javascript, CSS, Node.js, Postgres, and SQL",
         "bullets": [
-            "Capstone group project: a single-page web app for tracking and managing household pantry items and grocery lists, including project management, schemas, mock-ups, database tables and seed data, API pathing, auth, and front-end work using React, Redux, Context, Recharts, and CSS",
-            "Capstone personal project: a single-page web app for date night ideas, including schemas, mock-ups, database tables and seed data, API pathing, auth, and front-end work using React, Context, and CSS"
+            "Capstone group project: a single-page web application for tracking and managing household pantry items and grocery lists",
+            "Capstone personal project: a single-page web application for date night ideas",
+            "Back-end project work included project management, schemas, mock-ups, database tables and seed data, API pathing, auth",
+            "Front-end project work included using React, Redux, Context, Recharts, and leading CSS"
         ]
     }
 ]

@@ -43,11 +43,7 @@
     .petColumns {
         flex-direction: column;
     }
-
-    div.bottom {
-        height: 200px;
-    }
-
+    
     div.educationlist {
         flex-direction: column;
     }
