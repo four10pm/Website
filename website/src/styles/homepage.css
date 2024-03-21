@@ -1,15 +1,14 @@
 .app {
     display: flex; 
-}
-
-.navigation {
-    width: 20%; 
+   
 }
 
 .main {
     margin: 10px auto;
     width: 80%;
     background-color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -106,14 +105,19 @@ a:hover {
     color: #660033;
     display:  flex; 
     align-items: center; 
+    background-color: #f4edf0; 
+    border-radius: 8px; 
+    padding: 2px 5px; 
+    z-index: 2;
 }
 
 .scrollIcon {
-    font-size: xx-large; 
+    font-size: x-large; 
 }
 
 .scrollText {
     font-variant: small-caps;
     font-weight: bold;
     color: #660033;
+    line-height: 1; 
 }

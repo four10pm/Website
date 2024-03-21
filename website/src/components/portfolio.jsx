@@ -8,7 +8,6 @@ export default function Portfolio() {
     const [carousel, setCarousel] = useState("")
     const [pantryPartyNum, setPantryPartyNum] = useState(0)
     const [dateNightNum, setDateNightNum] = useState(0)
-    const projectImages = []
 
     return (
         <div className="portfolio" id="portfolio">
@@ -55,11 +54,11 @@ export default function Portfolio() {
                                     if (image.id === carouselNum) {
                                         return (
                                             <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
-                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
                                                 <div className="projectImageArea">
-                                                    <p className="projectCaption"> {image.caption} </p>
                                                     <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} />
+                                                    <p className="projectCaption"> {image.caption} </p>
                                                 </div>
+                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
                                                 <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                             </div>
                                         )
@@ -74,11 +73,11 @@ export default function Portfolio() {
                                         (project.id === "pantryParty" && image.id === pantryPartyNum)) {
                                         return (
                                             <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
-                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
                                                 <div className="projectImageArea">
-                                                    <p className="projectCaption"> {image.caption} </p>
                                                     <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} />
+                                                    <p className="projectCaption"> {image.caption} </p>
                                                 </div>
+                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
                                                 <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                             </div>
                                         )

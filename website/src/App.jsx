@@ -9,20 +9,44 @@ import './App.css'
 import './styles/homepage.css'
 
 export default function App() {
+  const [scrollDown, setScrollDown] = useState(true)
 
+  document.addEventListener("DOMContentLoaded", function(){
+
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        console.log("hi")
+        }
+      })
+      }
+
+    const target = document.querySelector(".portfolio")
+
+    const observer = new IntersectionObserver(callback);
+    observer.observe(target)
+})
+  
   return (
     <div className="app">
       <div className="main">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </div>
-        <a className="scroll" href="#portfolio">
+      {scrollDown &&
+        (<a className="scroll" href="#portfolio">
           <p className="scrollText"> Projects &nbsp; </p>
           <i className="scrollIcon"> {downIcon} </i>
-        </a>
+        </a>)
+      }
+      {!scrollDown &&
+        (<a className="scroll" href="#portfolio">
+          <p className="scrollText"> Projects &nbsp; </p>
+          <i className="scrollIcon"> {upIcon} </i>
+        </a>)
+      }
+
     </div>
   )
 }

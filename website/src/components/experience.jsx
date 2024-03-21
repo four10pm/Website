@@ -7,34 +7,39 @@ import "../styles/mobile.css"
 export default function Experience() {
     const [display, setDisplay] = useState("")
 
-    return (
-        <div className="experience">
-            {software.map((sw) => {
-                return (
-                    <div className="softwareExperience">
-                        {display !== sw.org &&
-                            <div className="experienceDisplay" onClick={() => { setDisplay(sw.org) }}>
-                                {softwareExperienceIcon} &nbsp; {sw.org}
-                            </div>
-                        }
-                        {display === sw.org &&
-                            <div className="software section" id={sw.org} onClick={() => setDisplay("")}>
-                                <h4> {sw.org} </h4>
-                                <p> {sw.position} </p>
-                                <p> {sw.time} </p>
-                                <p className="desc"> {sw.description} </p>
-                                <ul>
-                                    {sw.bullets.map((bullet) => {
-                                        return (
-                                            <li> {bullet} </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>}
-                    </div>
-                )
-            })}
-            {product.map((pm) => {
+    const softwareList = () => {
+        return (
+                software.map((sw) => {
+                    return (
+                        <div className="softwareExperience">
+                            {display !== sw.org &&
+                                <div className="experienceDisplay" onClick={() => { setDisplay(sw.org) }}>
+                                    {softwareExperienceIcon} &nbsp; {sw.org}
+                                </div>
+                            }
+                            {display === sw.org &&
+                                <div className="software section" id={sw.org} onClick={() => setDisplay("")}>
+                                    <h4> {sw.org} </h4>
+                                    <p> {sw.position} </p>
+                                    <p> {sw.time} </p>
+                                    <p className="desc"> {sw.description} </p>
+                                    <ul>
+                                        {sw.bullets.map((bullet) => {
+                                            return (
+                                                <li> {bullet} </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>}
+                        </div>
+                    )
+                })
+        )
+    }
+
+    const productList = () => {
+        return (
+            product.map((pm) => {
                 return (<div className="pmExperience">
                     {display !== pm.org &&
                         <div className="experienceDisplay" onClick={() => { setDisplay(pm.org) }}>
@@ -58,8 +63,13 @@ export default function Experience() {
                     }
                 </div>
                 )
-            })}
-            {education.map((edu) => {
+            })
+        )
+    }
+
+    const educationList = () => {
+        return (
+            education.map((edu) => {
                 return (
                     <div className="educationExperience">
                         {display !== edu.org &&
@@ -76,8 +86,13 @@ export default function Experience() {
                         }
                     </div>
                 )
-            })}
-            {volunteer.map((vol) => {
+            })
+        )
+    }
+
+    const volunteerList = () => {
+        return (
+            volunteer.map((vol) => {
                 return (
                     <div className="volunteerExperience">
                         {display !== vol.org &&
@@ -94,8 +109,13 @@ export default function Experience() {
                             </div>}
                     </div>
                 )
-            })}
-            {skills.map((skill) => {
+            })
+        )
+    }
+
+    const skillsList = () => {
+        return (
+            skills.map((skill) => {
                 return (
                     <div className="skillsExperience">
                         {display !== skill.group && skill.group !== "Languages" &&
@@ -128,26 +148,44 @@ export default function Experience() {
                                 </ul>
                             </div>
                         }
-                        
+
                     </div>
                 )
-            })}
-            <div className="hobbiesExperience">
-                {display !== "hobbies" &&
-                    <div className="experienceDisplay" onClick={() => { setDisplay("hobbies") }}>
-                        {hobbiesExperienceIcon} &nbsp; Hobbies
-                    </div>}
-                {display === "hobbies" &&
-                    <div className="hobbies subsection" onClick={() => { setDisplay("") }}>
-                        <h4> Hobbies </h4>
-                        <ul>
-                            <li> {hobbiesExperienceIcon} Reading </li>
-                            <li> {hobbiesExperienceIcon} Bullet journaling </li>
-                            <li> {hobbiesExperienceIcon} Baking </li>
-                            <li> {hobbiesExperienceIcon} Hiking </li>
-                            <li> {hobbiesExperienceIcon} Piano </li> 
-                        </ul>
-                    </div>}
+            })
+        )
+    }
+
+    const hobbiesList = () => {
+        return (
+        <div className="hobbiesExperience">
+            {display !== "hobbies" &&
+                <div className="experienceDisplay" onClick={() => { setDisplay("hobbies") }}>
+                    {hobbiesExperienceIcon} &nbsp; Hobbies
+                </div>}
+            {display === "hobbies" &&
+                <div className="hobbies subsection" onClick={() => { setDisplay("") }}>
+                    <h4> Hobbies </h4>
+                    <ul>
+                        <li> {hobbiesExperienceIcon} Reading </li>
+                        <li> {hobbiesExperienceIcon} Bullet journaling </li>
+                        <li> {hobbiesExperienceIcon} Baking </li>
+                        <li> {hobbiesExperienceIcon} Hiking </li>
+                        <li> {hobbiesExperienceIcon} Piano </li>
+                    </ul>
+                </div>}
+        </div>
+        )
+    }
+
+    return (
+        <div className="experience">
+            <div className="experienceList">
+                {softwareList()}
+                {productList()}
+                {educationList()}
+                {volunteerList()}
+                {skillsList()}
+                {hobbiesList()}
             </div>
         </div>
 

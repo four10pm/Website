@@ -11,18 +11,18 @@ export default function Homepage() {
     const pets = () => {
         return (
             <div className="easterEgg bioPhotoArea" onClick={() => { setBioInfo(false) }}>
-                <div class="pet">
+                <div className="pet">
                     <img alt="Ellie" src="public/images/Ellie.jpeg" className="petPhoto" />
-                    <h4 class="petName"> Ellie </h4>
+                    <h4 className="petName"> Ellie </h4>
                 </div>
                 <p>
                     <i className="pawPrintLeft"> {pawPrintLeft} </i>
                     You found us!
                     <i className="pawPrintRight"> {pawPrintRight} </i>
                 </p>
-                <div class="pet">
+                <div className="pet">
                     <img alt="Acadia" src="public/images/Acadia.jpeg" className="petPhoto" />
-                    <h4 class="petName"> Acadia </h4>
+                    <h4 className="petName"> Acadia </h4>
                 </div>
             </div>
         )
@@ -42,9 +42,9 @@ export default function Homepage() {
                             <h1> Paulina Fielek </h1>
                             <p> Portland, OR </p>
                             <p> Software Developer </p>
-                            <p> <a class="LI" href="https://www.linkedin.com/in/paulina-sarah-fielek"> LinkedIn &#x27A1; </a> </p>
-                            <p> <a class="LI" href="https://www.github.com/four10pm"> Github &#x27A1; </a> </p>
-                            <p> <a class="LI" href="mailto:paulinasfielek@gmail.com" name="paulinasfielek@gmail.com"> Email &#x27A1; </a> </p>
+                            <p> <a className="LI" href="https://www.linkedin.com/in/paulina-sarah-fielek"> LinkedIn &#x27A1; </a> </p>
+                            <p> <a className="LI" href="https://www.github.com/four10pm"> Github &#x27A1; </a> </p>
+                            <p> <a className="LI" href="mailto:paulinasfielek@gmail.com" name="paulinasfielek@gmail.com"> Email &#x27A1; </a> </p>
                         </div>
                     </div>
                 )}
@@ -67,3 +67,8 @@ export default function Homepage() {
         </div>
     )
 }
+
+//TODO: 
+// mobile styling 
+// carousel height
+// scroll button using intersection observer
