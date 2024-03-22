@@ -12,7 +12,7 @@ export default function Homepage() {
         return (
             <div className="easterEgg bioPhotoArea" onClick={() => { setBioInfo(false) }}>
                 <div className="pet">
-                    <img alt="Ellie" src="public/images/Ellie.jpeg" className="petPhoto" />
+                    <img alt="Ellie" src="/images/Ellie.jpeg" className="petPhoto" />
                     <h4 className="petName"> Ellie </h4>
                 </div>
                 <p>
@@ -21,7 +21,7 @@ export default function Homepage() {
                     <i className="pawPrintRight"> {pawPrintRight} </i>
                 </p>
                 <div className="pet">
-                    <img alt="Acadia" src="public/images/Acadia.jpeg" className="petPhoto" />
+                    <img alt="Acadia" src="/images/Acadia.jpeg" className="petPhoto" />
                     <h4 className="petName"> Acadia </h4>
                 </div>
             </div>
@@ -31,13 +31,13 @@ export default function Homepage() {
     return (
         <div className="bio">
             <span className="bioPets">
-                <img src="public/images/Ellie.jpeg" />
-                <img src="public/images/Acadia.jpeg" />
+                <img src="/images/Ellie.jpeg" />
+                <img src="/images/Acadia.jpeg" />
             </span>
             <div className="bioStart">
                 {!bioInfo && (
                     <div className="bioPhotoArea">
-                        <img className="bioPhoto" alt="Paulina" src="public/images/Headshot.jpeg" onClick={() => (setBioInfo(true))} />
+                        <img className="bioPhoto" alt="Paulina" src="/images/Headshot.jpeg" onClick={() => (setBioInfo(true))} />
                         <div className="bioInfo">
                             <h1> Paulina Fielek </h1>
                             <p> Portland, OR </p>
