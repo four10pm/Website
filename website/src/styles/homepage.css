@@ -87,6 +87,7 @@ a:hover {
     justify-content: space-around;
     width: 80%;
     margin: 0 auto;
+    cursor: default;
 }
 
 .easterEgg > p {
