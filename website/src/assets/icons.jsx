@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faPersonChalkboard, faGraduationCap, faHandHoldingHeart, faDesktop, faChartLine, faLanguage, faPenNib, faCircleChevronDown, faCircleChevronUp, faPaw } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faPersonChalkboard, faGraduationCap, faHandHoldingHeart, faDesktop, faChartLine, faLanguage, faPenNib, faCircleChevronDown, faCircleChevronUp, faPaw, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 export const softwareExperienceIcon = <FontAwesomeIcon icon={faLaptopCode} />
 export const pmExperienceIcon = <FontAwesomeIcon icon={faPersonChalkboard}/>
@@ -14,3 +14,4 @@ export const downIcon = <FontAwesomeIcon icon={faCircleChevronDown}/>
 export const upIcon = <FontAwesomeIcon icon={faCircleChevronUp}/> 
 export const pawPrintLeft = <FontAwesomeIcon icon={faPaw} />
 export const pawPrintRight = <FontAwesomeIcon icon={faPaw} />
+export const xIcon = <FontAwesomeIcon icon={faCircleXmark} />

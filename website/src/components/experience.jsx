@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { software, product, education, volunteer, skills, hobbies } from "./data"
-import { softwareExperienceIcon, pmExperienceIcon, educationExperienceIcon, volunteerExperienceIcon, codeExperienceIcon, toolsExperienceIcon, languagesExperienceIcon, hobbiesExperienceIcon } from "../assets/icons";
+import { softwareExperienceIcon, pmExperienceIcon, educationExperienceIcon, volunteerExperienceIcon, codeExperienceIcon, toolsExperienceIcon, languagesExperienceIcon, hobbiesExperienceIcon, xIcon } from "../assets/icons";
 import "../styles/experience.css"
 import "../styles/mobile.css"
 
@@ -9,31 +9,34 @@ export default function Experience() {
 
     const softwareList = () => {
         return (
-                software.map((sw) => {
-                    return (
-                        <div className="softwareExperience">
-                            {display !== sw.org &&
-                                <div className="experienceDisplay" onClick={() => { setDisplay(sw.org) }}>
-                                    {softwareExperienceIcon} &nbsp; {sw.org}
-                                </div>
-                            }
-                            {display === sw.org &&
-                                <div className="software section" id={sw.org} onClick={() => setDisplay("")}>
+            software.map((sw) => {
+                return (
+                    <div className="softwareExperience">
+                        {display !== sw.org &&
+                            <div className="experienceDisplay" onClick={() => { setDisplay(sw.org) }}>
+                                {softwareExperienceIcon} &nbsp; {sw.org}
+                            </div>
+                        }
+                        {display === sw.org &&
+                            <div className="software section" id={sw.org} >
+                                <div className="sectionHeader">
                                     <h4> {sw.org} </h4>
-                                    <p> {sw.position} </p>
-                                    <p> {sw.time} </p>
-                                    <p className="desc"> {sw.description} </p>
-                                    <ul>
-                                        {sw.bullets.map((bullet) => {
-                                            return (
-                                                <li> {bullet} </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </div>}
-                        </div>
-                    )
-                })
+                                    <i className="close" onClick={() => setDisplay("")}> {xIcon} </i>
+                                </div>
+                                <p> {sw.position} </p>
+                                <p> {sw.time} </p>
+                                <p className="desc"> {sw.description} </p>
+                                <ul>
+                                    {sw.bullets.map((bullet) => {
+                                        return (
+                                            <li> {bullet} </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>}
+                    </div>
+                )
+            })
         )
     }
 
@@ -47,8 +50,11 @@ export default function Experience() {
                         </div>
                     }
                     {display === pm.org &&
-                        <div className="product section" id={pm.org} onClick={() => setDisplay("")}>
-                            <h4> {pm.org} </h4>
+                        <div className="product section" id={pm.org} >
+                            <div className="sectionHeader">
+                                <h4> {pm.org} </h4>
+                                <i className="close" onClick={() => setDisplay("")}> {xIcon} </i>
+                            </div>
                             <p> {pm.position} </p>
                             <p> {pm.time} </p>
                             <p className="desc"> {pm.description} </p>
@@ -78,8 +84,11 @@ export default function Experience() {
                             </div>
                         }
                         {display === edu.org &&
-                            <div className="education subsection " id={edu.org} onClick={() => { setDisplay("") }}>
-                                <h4> {edu.org} </h4>
+                            <div className="education subsection " id={edu.org} >
+                                <div className="sectionHeader">
+                                    <h4> {edu.org} </h4>
+                                    <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
+                                </div>
                                 <p> {edu.type} </p>
                                 <p> {edu.time} </p>
                             </div>
@@ -101,8 +110,11 @@ export default function Experience() {
                             </div>
                         }
                         {display === vol.org &&
-                            <div className="volunteer subsection" id={vol.org} onClick={() => { setDisplay("") }}>
-                                <h4> {vol.org} </h4>
+                            <div className="volunteer subsection" id={vol.org} >
+                                <div className="sectionHeader">
+                                    <h4> {vol.org} </h4>
+                                    <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
+                                </div>
                                 <p> {vol.type} </p>
                                 <p> {vol.time} </p>
                                 <p className="desc"> {vol.description} </p>
@@ -129,8 +141,11 @@ export default function Experience() {
                             </div>
                         }
                         {display === skill.group && skill.group !== "Languages" &&
-                            <div className="skills subsection" id={skill.group} onClick={() => { setDisplay("") }}>
-                                <h4> {skill.group} </h4>
+                            <div className="skills subsection" id={skill.group} >
+                                <div className="sectionHeader">
+                                    <h4> {skill.group} </h4>
+                                    <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
+                                </div>
                                 <ul>
                                     {skill.skillset.map((bullet) => {
                                         return <li> {codeExperienceIcon} {bullet} </li>
@@ -139,8 +154,11 @@ export default function Experience() {
                             </div>
                         }
                         {display === skill.group && skill.group === "Languages" &&
-                            <div className="skills subsection" id={skill.group} onClick={() => { setDisplay("") }}>
-                                <h4> {skill.group} </h4>
+                            <div className="skills subsection" id={skill.group} >
+                                <div className="sectionHeader">
+                                    <h4> {skill.group} </h4>
+                                    <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
+                                </div>
                                 <ul>
                                     {skill.skillset.map((bullet) => {
                                         return <li> {languagesExperienceIcon} {bullet} </li>
@@ -157,28 +175,32 @@ export default function Experience() {
 
     const hobbiesList = () => {
         return (
-        <div className="hobbiesExperience">
-            {display !== "hobbies" &&
-                <div className="experienceDisplay" onClick={() => { setDisplay("hobbies") }}>
-                    {hobbiesExperienceIcon} &nbsp; Hobbies
-                </div>}
-            {display === "hobbies" &&
-                <div className="hobbies subsection" onClick={() => { setDisplay("") }}>
-                    <h4> Hobbies </h4>
-                    <ul>
-                        <li> {hobbiesExperienceIcon} Reading </li>
-                        <li> {hobbiesExperienceIcon} Bullet journaling </li>
-                        <li> {hobbiesExperienceIcon} Baking </li>
-                        <li> {hobbiesExperienceIcon} Hiking </li>
-                        <li> {hobbiesExperienceIcon} Piano </li>
-                    </ul>
-                </div>}
-        </div>
+            <div className="hobbiesExperience">
+                {display !== "hobbies" &&
+                    <div className="experienceDisplay" onClick={() => { setDisplay("hobbies") }}>
+                        {hobbiesExperienceIcon} &nbsp; Hobbies
+                    </div>}
+                {display === "hobbies" &&
+                    <div className="hobbies subsection">
+                        <div className="sectionHeader">
+                            <h4> Hobbies </h4>
+                            <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
+                        </div>
+                        <ul>
+                            <li> {hobbiesExperienceIcon} Reading </li>
+                            <li> {hobbiesExperienceIcon} Bullet journaling </li>
+                            <li> {hobbiesExperienceIcon} Baking </li>
+                            <li> {hobbiesExperienceIcon} Hiking </li>
+                            <li> {hobbiesExperienceIcon} Piano </li>
+                        </ul>
+                    </div>}
+            </div>
         )
     }
 
     return (
         <div className="experience">
+            <h3 className="experienceTitle"> Experience </h3>
             <div className="experienceList">
                 {softwareList()}
                 {productList()}

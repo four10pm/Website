@@ -1,3 +1,4 @@
+
 .app {
     display: flex; 
    
@@ -8,7 +9,6 @@
     width: 80%;
     background-color: white;
     overflow-y: scroll;
-    scroll-behavior: smooth;
 }
 
 h1 {
@@ -16,6 +16,24 @@ h1 {
     color: #660033;
     margin-left: 10px;
     font-size: 2.5em;
+}
+
+h2 {
+    font-variant: small-caps;
+    color: #660033;
+    font-size: 1.75em;
+}
+
+h3 {
+    font-variant: small-caps;
+    color: #660033;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+h4 {
+    font-variant: small-caps;
+    color: #660033;
 }
 
 .bioPhotoArea {

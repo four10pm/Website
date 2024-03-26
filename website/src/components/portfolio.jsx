@@ -11,6 +11,7 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id="portfolio">
+            <h3 className="portfolioTitle"> Portfolio </h3>
             {projects.map((project) => {
                 const slideshowNext = () => {
                     setCarousel(project.title)
@@ -45,8 +46,8 @@ export default function Portfolio() {
                         <div className="projectInfo">
                             <h4 className="projectName"> {project.title} </h4>
                             <p className="projectDescription"> {project.description} </p>
-                            <a className="projectURL" href={project.link}> {project.title} &#x27A1; </a> <br />
-                            <a className="projectGithub" href={project.github}> Github &#x27A1; </a>
+                            <a className="projectURL" target="_blank" href={project.link} title={project.link} > {project.title} Website &#x27A1; </a> <br />
+                            <a className="projectGithub" target="_blank" href={project.github} title={project.github}> Github &#x27A1; </a>
                         </div>
                         <div className="projectCarousel" >
                             {project.images.map((image) => {
@@ -55,11 +56,11 @@ export default function Portfolio() {
                                         return (
                                             <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
                                                 <div className="projectImageArea">
-                                                    <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} />
+                                                    <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} title={image.caption} />
                                                     <p className="projectCaption"> {image.caption} </p>
                                                 </div>
-                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
-                                                <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
+                                                <button className="previous" title="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
+                                                <button className="next" title="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                             </div>
                                         )
                                     } else {
@@ -74,11 +75,11 @@ export default function Portfolio() {
                                         return (
                                             <div className={`carouselImage ${project.title}`} id={`${image.id}`}>
                                                 <div className="projectImageArea">
-                                                    <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} />
+                                                    <img className="projectImage" src={image.src} style={{ display: "inline-block" }} alt={`${project.title} image`} title={image.caption}/>
                                                     <p className="projectCaption"> {image.caption} </p>
                                                 </div>
-                                                <button className="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
-                                                <button className="next" onClick={() => { slideshowNext() }}> &#10095; </button>
+                                                <button className="previous" title="previous" onClick={() => { slideshowPrevious() }}> &#10094; </button>
+                                                <button className="next" title="next" onClick={() => { slideshowNext() }}> &#10095; </button>
                                             </div>
                                         )
                                     } else {

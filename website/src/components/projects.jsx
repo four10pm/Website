@@ -5,8 +5,8 @@ export const projects = [
         "id": "pantryParty",
         "title": "Pantry Party",
         "link": "https://pantry-party-app.onrender.com/",
-        "github": "",
-        "description": "Group capstone project: A single-page web app for tracking and managing household pantry items and grocery lists",
+        "github": "https://github.com/pantry-party/pantry-party",
+        "description": "Group capstone project: A single-page web application for tracking and managing household pantry items and grocery lists",
         "images": [
             {
                 "id": 0,
@@ -58,11 +58,25 @@ export const projects = [
                 "src": "/images/Projects/Pantry-Party-Grocery-Edit.png",
                 "caption": "You can edit the grocery list in edit mode, or by dragging and dropping items"
             },
-            
             {
                 "id": 10,
                 "src": "/images/Projects/Pantry-Party-Grocery-Mobile.png",
                 "caption": "On mobile, the lists stack above each other"
+            },
+            {
+                "id": 11,
+                "src": "/images/Projects/Pantry-Party-Schema.png",
+                "caption": "We created this schema, off of which we based our database"
+            },
+            {
+                "id": 12,
+                "src": "/images/Projects/Pantry-Party-Grocery-List-Mockup.png",
+                "caption": "This was the mockup we created for our grocery list page"
+            },
+            {
+                "id": 13,
+                "src": "/images/Projects/Pantry-Party-Pantry-Mockup.png",
+                "caption": "This was the mockup we created for our pantry page"
             }
         ],
         "stack": ["node.js", "SQL", "react", "redux", "context", "CSS"],
@@ -73,8 +87,8 @@ export const projects = [
         "id": "dateNight",
         "title": "Date Night",
         "link": "https://pantry-party-app.onrender.com/",
-        "github": "",
-        "description": "Personal capstone project: A single-page web app for finding date night ideas",
+        "github": "https://github.com/four10pm/Personal_Project",
+        "description": "Personal capstone project: A single-page web application for finding date night ideas",
         "images": [
             {
                 "id": 0,

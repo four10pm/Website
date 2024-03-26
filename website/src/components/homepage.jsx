@@ -42,16 +42,16 @@ export default function Homepage() {
                             <h1> Paulina Fielek </h1>
                             <p> Portland, OR </p>
                             <p> Software Developer </p>
-                            <p> <a className="LI" href="https://www.linkedin.com/in/paulina-sarah-fielek"> LinkedIn &#x27A1; </a> </p>
-                            <p> <a className="LI" href="https://www.github.com/four10pm"> Github &#x27A1; </a> </p>
-                            <p> <a className="LI" href="mailto:paulinasfielek@gmail.com" name="paulinasfielek@gmail.com"> Email &#x27A1; </a> </p>
+                            <p> <a className="LI" href="https://www.linkedin.com/in/paulina-sarah-fielek" target="_blank" title="https://www.linkedin.com/in/paulina-sarah-fielek"> LinkedIn &#x27A1; </a> </p>
+                            <p> <a className="LI" href="https://www.github.com/four10pm" target="_blank" title="https://www.github.com/four10pm"> Github &#x27A1; </a> </p>
+                            <p> <a className="LI" href="mailto:paulinasfielek@gmail.com" target="_blank" title="paulinasfielek@gmail.com"> Email &#x27A1; </a> </p>
                         </div>
                     </div>
                 )}
                 {bioInfo && pets()}
             </div>
             <div className="bioIntro">
-                <h4> About Me </h4>
+                <h3> About Me </h3>
                 <p className="intro">
                     After spending five years as a Product Manager, I wanted to refocus on software development. <br />
                     I love coding for accessible and enjoyable user experience, visual appeal, and easy collaboration. <br />

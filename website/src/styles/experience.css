@@ -1,7 +1,7 @@
 .experience {
     text-align: left;
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 10px 5px;
     border-radius: 8px;
     background-color: #f4edf0;
@@ -10,9 +10,11 @@
     background-size: 20px 20px;
 }
 
-h4 {
-    font-variant: small-caps;
-    color: #660033;
+.experienceTitle {
+    background-color: #b27f99;
+    width: 100%;
+    margin: 5px auto;
+    border-radius: 8px;
 }
 
 .experienceDisplay {
@@ -27,6 +29,16 @@ h4 {
     font-size: large;
     color: #660033;
     cursor: pointer;
+}
+
+.close {
+    color: #660033;
+    cursor: pointer;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
 }
 
 .section {
@@ -56,4 +68,18 @@ h4 {
     text-align: left;
     margin: 5px auto;
     padding-inline-start: 0;
+    flex-wrap: wrap; 
 }
+
+#Software > ul {
+    justify-content: left;
+}
+
+#Software > ul >li {
+    width: 25%;
+}
+
+#Tools > ul > li{
+    width: 33%;
+}
+
