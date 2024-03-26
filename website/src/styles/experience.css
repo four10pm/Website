@@ -39,6 +39,7 @@
 .sectionHeader {
     display: flex;
     justify-content: space-between;
+    cursor:default;
 }
 
 .section {

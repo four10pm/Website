@@ -20,7 +20,7 @@ export default function Experience() {
                         {display === sw.org &&
                             <div className="software section" id={sw.org} >
                                 <div className="sectionHeader">
-                                    <h4> {sw.org} </h4>
+                                    <h4 onClick={() => { setDisplay("") }}> {sw.org} </h4>
                                     <i className="close" onClick={() => setDisplay("")}> {xIcon} </i>
                                 </div>
                                 <p> {sw.position} </p>
@@ -52,7 +52,7 @@ export default function Experience() {
                     {display === pm.org &&
                         <div className="product section" id={pm.org} >
                             <div className="sectionHeader">
-                                <h4> {pm.org} </h4>
+                                <h4 onClick={() => { setDisplay("") }}> {pm.org} </h4>
                                 <i className="close" onClick={() => setDisplay("")}> {xIcon} </i>
                             </div>
                             <p> {pm.position} </p>
@@ -86,7 +86,7 @@ export default function Experience() {
                         {display === edu.org &&
                             <div className="education subsection " id={edu.org} >
                                 <div className="sectionHeader">
-                                    <h4> {edu.org} </h4>
+                                    <h4 onClick={() => { setDisplay("") }}> {edu.org} </h4>
                                     <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
                                 </div>
                                 <p> {edu.type} </p>
@@ -112,7 +112,7 @@ export default function Experience() {
                         {display === vol.org &&
                             <div className="volunteer subsection" id={vol.org} >
                                 <div className="sectionHeader">
-                                    <h4> {vol.org} </h4>
+                                    <h4 onClick={() => { setDisplay("") }}> {vol.org} </h4>
                                     <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
                                 </div>
                                 <p> {vol.type} </p>
@@ -143,7 +143,7 @@ export default function Experience() {
                         {display === skill.group && skill.group !== "Languages" &&
                             <div className="skills subsection" id={skill.group} >
                                 <div className="sectionHeader">
-                                    <h4> {skill.group} </h4>
+                                    <h4 onClick={() => { setDisplay("") }}> {skill.group} </h4>
                                     <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
                                 </div>
                                 <ul>
@@ -156,7 +156,7 @@ export default function Experience() {
                         {display === skill.group && skill.group === "Languages" &&
                             <div className="skills subsection" id={skill.group} >
                                 <div className="sectionHeader">
-                                    <h4> {skill.group} </h4>
+                                    <h4 onClick={() => { setDisplay("") }}> {skill.group} </h4>
                                     <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
                                 </div>
                                 <ul>
@@ -183,7 +183,7 @@ export default function Experience() {
                 {display === "hobbies" &&
                     <div className="hobbies subsection">
                         <div className="sectionHeader">
-                            <h4> Hobbies </h4>
+                            <h4 onClick={() => { setDisplay("") }}> Hobbies </h4>
                             <i className="close" onClick={() => { setDisplay("") }}> {xIcon} </i>
                         </div>
                         <ul>
