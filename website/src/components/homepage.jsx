@@ -67,8 +67,3 @@ export default function Homepage() {
         </div>
     )
 }
-
-//TODO: 
-// mobile styling 
-// carousel height
-// scroll button using intersection observer
