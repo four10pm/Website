@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Homepage from './components/homepage'
-import Experience from './components/experience'
-import Portfolio from './components/portfolio'
-import Contact from './components/contact'
 import { downIcon, upIcon } from './assets/icons.jsx'
 import './App.css'
 import './styles/homepage.css'
@@ -11,22 +8,17 @@ import './styles/homepage.css'
 export default function App() {
   const [scrollDown, setScrollDown] = useState(true)
 
-  document.addEventListener("DOMContentLoaded", function(){
-
-    const callback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        console.log("hi")
+  useEffect(
+    () => {
+      document.addEventListener('scroll', (event) => {
+        if (scrollY < document.body.scrollHeight/3) {
+          setScrollDown(true)
+        } else if (scrollY >=document.body.scrollHeight/3) {
+          setScrollDown(false)
         }
-      })
-      }
+      }), []
+    })
 
-    const target = document.querySelector(".portfolio")
-
-    const observer = new IntersectionObserver(callback);
-    observer.observe(target)
-})
-  
   return (
     <div className="app">
       <div className="main">
@@ -41,8 +33,8 @@ export default function App() {
         </a>)
       }
       {!scrollDown &&
-        (<a className="scroll" href="#portfolio">
-          <p className="scrollText"> Projects &nbsp; </p>
+        (<a className="scroll" href="#bio">
+          <p className="scrollText"> Back to Top &nbsp; </p>
           <i className="scrollIcon"> {upIcon} </i>
         </a>)
       }

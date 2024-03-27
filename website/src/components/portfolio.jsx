@@ -3,7 +3,7 @@ import { projects } from "./projects"
 import "../styles/portfolio.css"
 import "../styles/mobile.css"
 
-export default function Portfolio() {
+export default function Portfolio({ref}) {
     const [carouselNum, setCarouselNum] = useState(0)
     const [carousel, setCarousel] = useState("")
     const [pantryPartyNum, setPantryPartyNum] = useState(0)

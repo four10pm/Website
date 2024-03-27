@@ -29,7 +29,7 @@ export default function Homepage() {
     }
 
     return (
-        <div className="bio">
+        <div className="bio" id="bio">
             <span className="bioPets">
                 <img src="/images/Ellie.jpeg" />
                 <img src="/images/Acadia.jpeg" />
