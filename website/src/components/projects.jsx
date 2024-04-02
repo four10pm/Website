@@ -86,7 +86,7 @@ export const projects = [
     {
         "id": "dateNight",
         "title": "Date Night",
-        "link": "https://pantry-party-app.onrender.com/",
+        "link": "https://datenight-project-client.onrender.com",
         "github": "https://github.com/four10pm/Personal_Project",
         "description": "Personal capstone project: A single-page web application for finding date night ideas",
         "images": [
